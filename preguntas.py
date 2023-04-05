@@ -1,3 +1,7 @@
+import csv
+
+with open("data.csv", "r") as file:
+    data = file.readlines()
 """
 Laboratorio de Programación Básica en Python para Manejo de Datos
 -----------------------------------------------------------------------------------------
@@ -14,14 +18,15 @@ Utilice el archivo `data.csv` para resolver las preguntas.
 
 
 def pregunta_01():
-    """
-    Retorne la suma de la segunda columna.
 
-    Rta/
-    214
+    with open("data.csv", "r") as file:
+        data = csv.reader(file)
 
-    """
-    return
+    sum = 0
+    for i in data:
+        sum += int(i[1])
+    
+    return sum
 
 
 def pregunta_02():
