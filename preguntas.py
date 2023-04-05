@@ -57,10 +57,14 @@ def pregunta_02():
         for a in data:
             if(str(a[0])==i):
                 sum += 1
-        count.append(sum)
+        listaR.append((i,sum))
         
-    listaR.append((lt,count))
+    #listaR.append((lt,count))
     return listaR
+
+listaR = pregunta_02()
+print(listaR)
+
 
 
 def pregunta_03():
