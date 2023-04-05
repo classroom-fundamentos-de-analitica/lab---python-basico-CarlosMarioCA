@@ -18,10 +18,9 @@ def pregunta_01():
 
     with open("data.csv", "r") as file:
         data = csv.reader(file)
-
-    sum = 0
-    for i in data:
-        sum += int(i[1])
+        sum = 0
+        for i in data:
+            sum += int(i[1])
     
     return sum
 
