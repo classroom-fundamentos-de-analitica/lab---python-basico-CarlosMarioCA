@@ -47,9 +47,7 @@ def pregunta_02():
     lt = ["A","B","C","D","E"]
     listaR= []
 
-    with open("data.csv", "r") as raw:
-        table = csv.reader(raw, delimiter='	')
-        data = list(table)
+    data = read_csv
     
     for i in lt:
         count = 0
@@ -80,9 +78,7 @@ def pregunta_03():
     lt = ["A","B","C","D","E"]
     listaR= []
 
-    with open("data.csv", "r") as raw:
-        table = csv.reader(raw, delimiter='	')
-        data = list(table)
+    data = read_csv
     
     for i in lt:
         sum = 0
@@ -92,9 +88,6 @@ def pregunta_03():
         listaR.append((i,sum))
 
     return listaR
-
-lista = pregunta_03()
-print(lista)
 
 
 def pregunta_04():
