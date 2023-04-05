@@ -47,7 +47,7 @@ def pregunta_02():
     lt = ["A","B","C","D","E"]
     listaR= []
 
-    data = read_csv
+    data = read_csv()
     
     for i in lt:
         count = 0
@@ -78,7 +78,7 @@ def pregunta_03():
     lt = ["A","B","C","D","E"]
     listaR= []
 
-    data = read_csv
+    data = read_csv()
     
     for i in lt:
         sum = 0
