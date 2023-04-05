@@ -17,7 +17,7 @@ Utilice el archivo `data.csv` para resolver las preguntas.
 def pregunta_01():
 
     with open("data.csv", "r") as file:
-        data = csv.reader(file)
+        data = csv.reader(file, delimiter="   ")
         sum = 0
         for i in data:
             sum += int(i[1])
