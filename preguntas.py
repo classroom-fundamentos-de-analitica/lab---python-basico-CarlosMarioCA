@@ -14,14 +14,17 @@ Utilice el archivo `data.csv` para resolver las preguntas.
 
 """
 
-def pregunta_01():
-    sum=0
-
+def read_csv():
     with open("data.csv", "r") as raw:
         table = csv.reader(raw, delimiter='	')
         data = list(table)
-        for i in data:
-            sum += int(i[1])
+    return data
+
+def pregunta_01():
+    sum=0
+    data = read_csv()
+    for i in data:
+        sum += int(i[1])
     
     return sum
 
