@@ -17,9 +17,9 @@ Utilice el archivo `data.csv` para resolver las preguntas.
 def pregunta_01():
     sum=0
 
-    with open("data.csv", "r") as file:
-        data = csv.reader(file, delimiter='	')
-        data = list(data)
+    with open("data.csv", "r") as raw:
+        table = csv.reader(raw, delimiter='	')
+        data = list(table)
         for i in data:
             sum += int(i[1])
     
@@ -41,7 +41,23 @@ def pregunta_02():
     ]
 
     """
-    return
+    lt = ["A","B","C","D","E"]
+    count = []
+    listaR= []
+
+    with open("data.csv", "r") as raw:
+        table = csv.reader(raw, delimiter='	')
+        data = list(table)
+    
+    for i in lt:
+        sum = 0
+        for a in data:
+            if(a[0]==i):
+                sum += 1
+        count.append(sum)
+        
+    listaR.append((lt,count))
+    return listaR
 
 
 def pregunta_03():
@@ -59,6 +75,8 @@ def pregunta_03():
     ]
 
     """
+
+
     return
 
 
