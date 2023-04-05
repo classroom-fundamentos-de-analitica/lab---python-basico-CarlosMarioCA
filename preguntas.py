@@ -52,7 +52,7 @@ def pregunta_02():
     for i in lt:
         sum = 0
         for a in data:
-            if(a[0]==i):
+            if(str(a[0])==i):
                 sum += 1
         count.append(sum)
         
