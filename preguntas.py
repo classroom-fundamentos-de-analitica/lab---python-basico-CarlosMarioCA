@@ -1,7 +1,5 @@
 import csv
 
-with open("data.csv", "r") as file:
-    data = file.readlines()
 """
 Laboratorio de Programación Básica en Python para Manejo de Datos
 -----------------------------------------------------------------------------------------
@@ -15,7 +13,6 @@ Utilice el archivo `data.csv` para resolver las preguntas.
 
 
 """
-
 
 def pregunta_01():
 
