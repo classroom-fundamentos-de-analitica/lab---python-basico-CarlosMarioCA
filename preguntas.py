@@ -15,10 +15,11 @@ Utilice el archivo `data.csv` para resolver las preguntas.
 """
 
 def pregunta_01():
+    sum=0
 
     with open("data.csv", "r") as file:
-        data = csv.reader(file, delimiter='  ')
-        sum = 0
+        data = csv.reader(file, delimiter='	')
+        data = list(data)
         for i in data:
             sum += int(i[1])
     
