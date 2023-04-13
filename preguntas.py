@@ -353,10 +353,6 @@ def pregunta_10():
 
     return list
 
-list = pregunta_10()
-print(list)
-
-def pregunta_11():
     """
     Retorne un diccionario que contengan la suma de la columna 2 para cada letra de la
     columna 4, ordenadas alfabeticamente.
@@ -374,7 +370,23 @@ def pregunta_11():
 
 
     """
-    return
+
+def pregunta_11():
+    data = read_csv()
+    dictionary = {}
+
+    for i in data:
+        listLt = i[3].split(",")
+        for a in listLt:
+            if a in dictionary:
+                dictionary[a] = int(dictionary[a]) + int(i[1])
+            else:
+                dictionary[a] = int(i[1])
+
+    keys = list(dictionary.keys())
+    keys.sort()
+    dictionary = {i: dictionary[i] for i in keys}
+    return dictionary
 
 
 def pregunta_12():
