@@ -20,6 +20,7 @@ def read_csv():
         data = list(table)
     return data
 
+
 def pregunta_01():
     sum=0
     data = read_csv()
@@ -85,12 +86,11 @@ def pregunta_03():
         for a in data:
             if(str(a[0])==i):
                 sum += int(a[1])
+
         listaR.append((i,sum))
 
     return listaR
 
-
-def pregunta_04():
     """
     La columna 3 contiene una fecha en formato `YYYY-MM-DD`. Retorne la cantidad de
     registros por cada mes, tal como se muestra a continuación.
@@ -112,7 +112,23 @@ def pregunta_04():
     ]
 
     """
-    return
+
+def pregunta_04():
+
+    months = ["01","02","03","04","05","06","07","08","09","10","11","12"]
+    data = read_csv()
+    list = []
+
+    for a in months:
+        sum = 0
+        for i in data:
+            month = i[2][5:7]
+            if a == (str(month)):
+                sum += 1
+        
+        list.append((a,sum))
+
+    return list
 
 
 def pregunta_05():
