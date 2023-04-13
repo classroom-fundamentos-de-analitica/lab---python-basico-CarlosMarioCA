@@ -213,8 +213,6 @@ def pregunta_06():
 
     return list
 
-
-def pregunta_07():
     """
     Retorne una lista de tuplas que asocien las columnas 0 y 1. Cada tupla contiene un
     valor posible de la columna 2 y una lista con todas las letras asociadas (columna 1)
@@ -235,7 +233,19 @@ def pregunta_07():
     ]
 
     """
-    return
+
+def pregunta_07():
+
+    data = read_csv()
+    list = []
+    for n in range(0,10):
+        listNumber = []
+        for i in data:
+            number = int(i[1])
+            if int(n) == number:
+                listNumber.append(i[0])
+        list.append((n,listNumber))
+    return list
 
 
 def pregunta_08():
