@@ -323,8 +323,6 @@ def pregunta_09():
 
     return dictionary
 
-list = pregunta_09()
-print(list)
 
 def pregunta_10():
     """
