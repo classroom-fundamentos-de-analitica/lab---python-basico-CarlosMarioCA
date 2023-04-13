@@ -372,6 +372,7 @@ def pregunta_10():
     """
 
 def pregunta_11():
+
     data = read_csv()
     dictionary = {}
 
@@ -388,8 +389,6 @@ def pregunta_11():
     dictionary = {i: dictionary[i] for i in keys}
     return dictionary
 
-
-def pregunta_12():
     """
     Genere un diccionario que contengan como clave la columna 1 y como valor la suma de
     los valores de la columna 5 sobre todo el archivo.
@@ -404,4 +403,24 @@ def pregunta_12():
     }
 
     """
-    return
+
+def pregunta_12():
+
+    data = read_csv()
+    dictionary = {}
+
+    for a in data:
+        lt = a[0]
+        listCode = a[4]
+        codes = listCode.split(sep=",")
+        for i in codes:
+            num = int(i[4:])
+            if lt in dictionary:
+                dictionary[lt] = int(dictionary[lt])+ num
+            else:
+                dictionary[lt] = num
+
+    keys = list(dictionary.keys())
+    keys.sort()
+    dictionary = {i: dictionary[i] for i in keys}
+    return dictionary
