@@ -166,8 +166,6 @@ def pregunta_05():
 
     return list
 
-
-def pregunta_06():
     """
     La columna 5 codifica un diccionario donde cada cadena de tres letras corresponde a
     una clave y el valor despues del caracter `:` corresponde al valor asociado a la
@@ -189,8 +187,34 @@ def pregunta_06():
     ]
 
     """
-    return
 
+def pregunta_06():
+
+    dic = ["aaa","bbb","ccc","ddd","eee","fff","ggg","hhh","iii","jjj"]
+    data = read_csv()
+    list = []
+    codes = []
+
+    for a in dic:
+        max = 0
+        min = 20
+        for i in data:
+            dic = i[4]
+            codes = dic.split(sep=",")
+            for d in codes:
+                key, value = d.split(sep=":")
+                if key == a:
+                    if int(value) > int(max):
+                        max = value
+                    if int(value) < int(min):
+                        min = value
+        
+        list.append((a,min,max))
+
+    return list
+
+list = pregunta_06()
+print(list)
 
 def pregunta_07():
     """
