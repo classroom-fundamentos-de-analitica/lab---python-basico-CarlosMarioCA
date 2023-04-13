@@ -323,8 +323,6 @@ def pregunta_09():
 
     return dictionary
 
-
-def pregunta_10():
     """
     Retorne una lista de tuplas contengan por cada tupla, la letra de la columna 1 y la
     cantidad de elementos de las columnas 4 y 5.
@@ -342,8 +340,21 @@ def pregunta_10():
 
 
     """
-    return
 
+def pregunta_10():
+
+    data = read_csv()
+    list = []
+
+    for i in data:
+        num1 = len(i[3].split(sep=","))
+        num2 = len(i[4].split(sep=","))
+        list.append((i[0], num1, num2))
+
+    return list
+
+list = pregunta_10()
+print(list)
 
 def pregunta_11():
     """
