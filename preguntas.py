@@ -213,8 +213,6 @@ def pregunta_06():
 
     return list
 
-list = pregunta_06()
-print(list)
 
 def pregunta_07():
     """
