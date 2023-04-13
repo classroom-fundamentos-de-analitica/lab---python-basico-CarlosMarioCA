@@ -247,8 +247,6 @@ def pregunta_07():
         list.append((n,listNumber))
     return list
 
-
-def pregunta_08():
     """
     Genere una lista de tuplas, donde el primer elemento de cada tupla contiene  el valor
     de la segunda columna; la segunda parte de la tupla es una lista con las letras
@@ -270,7 +268,24 @@ def pregunta_08():
     ]
 
     """
-    return
+
+def pregunta_08():
+
+    data = read_csv()
+    list = []
+    for n in range(0,10):
+        listNumber = []
+        for i in data:
+            number = int(i[1])
+            letter = i[0]
+            if int(n) == number and letter not in listNumber:
+                listNumber.append(i[0])
+        listNumber.sort()
+        list.append((n,listNumber))
+    return list
+
+list = pregunta_08()
+print(list)
 
 
 def pregunta_09():
