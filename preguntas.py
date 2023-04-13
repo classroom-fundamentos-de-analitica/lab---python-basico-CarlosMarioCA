@@ -284,11 +284,6 @@ def pregunta_08():
         list.append((n,listNumber))
     return list
 
-list = pregunta_08()
-print(list)
-
-
-def pregunta_09():
     """
     Retorne un diccionario que contenga la cantidad de registros en que aparece cada
     clave de la columna 5.
@@ -308,8 +303,28 @@ def pregunta_09():
     }
 
     """
-    return
 
+def pregunta_09():
+    dic = ["aaa","bbb","ccc","ddd","eee","fff","ggg","hhh","iii","jjj"]
+    data = read_csv()
+    list =[]
+    dictionary = {}
+
+    for d in dic:
+        dictionary[d] = 0
+        sum = 0
+        for i in data:
+            diclt = i[4]
+            codes = diclt.split(sep = ",")
+            for a in codes:
+                key, value = a.split(sep=":")
+                if key == d:
+                    dictionary[d] = dictionary[d] + 1
+
+    return dictionary
+
+list = pregunta_09()
+print(list)
 
 def pregunta_10():
     """
