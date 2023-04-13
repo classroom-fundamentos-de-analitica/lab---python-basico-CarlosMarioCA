@@ -209,7 +209,7 @@ def pregunta_06():
                     if int(value) < int(min):
                         min = value
         
-        list.append((a,min,max))
+        list.append((a,int(min),int(max)))
 
     return list
 
