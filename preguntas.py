@@ -29,8 +29,6 @@ def pregunta_01():
     
     return sum
 
-
-def pregunta_02():
     """
     Retorne la cantidad de registros por cada letra de la primera columna como la lista
     de tuplas (letra, cantidad), ordendas alfabéticamente.
@@ -45,6 +43,9 @@ def pregunta_02():
     ]
 
     """
+
+def pregunta_02():
+
     lt = ["A","B","C","D","E"]
     listaR= []
 
@@ -59,8 +60,6 @@ def pregunta_02():
 
     return listaR
 
-
-def pregunta_03():
     """
     Retorne la suma de la columna 2 por cada letra de la primera columna como una lista
     de tuplas (letra, suma) ordendas alfabeticamente.
@@ -75,6 +74,9 @@ def pregunta_03():
     ]
 
     """
+
+def pregunta_03():
+
 
     lt = ["A","B","C","D","E"]
     listaR= []
@@ -130,8 +132,6 @@ def pregunta_04():
 
     return list
 
-
-def pregunta_05():
     """
     Retorne una lista de tuplas con el valor maximo y minimo de la columna 2 por cada
     letra de la columa 1.
@@ -146,7 +146,25 @@ def pregunta_05():
     ]
 
     """
-    return
+
+def pregunta_05():
+
+    data = read_csv()
+    lt = ["A","B","C","D","E"]
+    list = []
+    for i in lt:
+        min = 10 
+        max = 0
+        for a in data:
+            number = int(a[1])
+            if i == a[0]:
+                if (number>max):
+                    max = number
+                if (number<min):
+                    min = number
+        list.append((i,max,min))
+
+    return list
 
 
 def pregunta_06():
